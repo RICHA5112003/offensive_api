@@ -1,7 +1,13 @@
+# Exported from Render on 2025-07-10T04:00:53Z
 services:
-  - type: web
-    name: offensive-api
-    env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: python app.py
-    plan: free
+- type: web
+  name: Offensive_detection_
+  runtime: python
+  repo: https://github.com/RICHA5112003/offensive_api
+  plan: free
+  region: oregon
+  buildCommand: pip install -r requirements.txt
+  startCommand: python app.py
+  autoDeployTrigger: commit
+version: "1"
+
